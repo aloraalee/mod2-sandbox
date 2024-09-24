@@ -79,38 +79,47 @@ var loginCurrent = true
 // When reassigning variables, you do not use the keyword "var"
 
 // 3a. Declare a variable "userName" that holds a string of your first name.  Print it to the console.
-
-// 3b. On a new line, reassign the value of your "userName" variable to be a friend's name.  Print it to the console again.  Notice how the 2 console logs give you a different value based on the variable's value at that moment
+      var userName = 'Alora'
+      console.log('Username:', userName)
+// 3b. On a new line, reassign the value of your "userName" variable to be a friend's name.  Print it to the console again.  
+// Notice how the 2 console logs give you a different value based on the variable's value at that moment
+userName = 'Diane'
+console.log('New username:', userName)
 
 // 3c. 
-// var num1 = 3
-// console.log('num1: ', num1)
+var num1 = 3
+console.log('num1: ', num1)
 // Uncomment the variable "num1" Print it.
 
-// var num2 = num1 + 2
-// console.log('num2: ', num2)
+var num2 = num1 + 2
+console.log('num2: ', num2)
 // Uncomment the variable "num2". Print it.
 
-// console.log('num1 again: ', num1)
+console.log('num1 again: ', num1)
 // Uncomment the console log above to print num1 again.  
     // Notice that the value hasn't changed even though we added 2 to it when declaring num2. Why?
-
+// Because we saved that change in the variable called num2 and did not rename num1
 // Declare another variable "num3" and assign it a value of num1 * num2.  Print it.
-
+var num3 = num1 * num2
+console.log('Num3', num3)
 // 3d. 
 // Declare a variable "myNumber" and assign it a value of 0.  Print it.
+var myNumber = 0
+console.log('My number:', myNumber)
 // On a new line, reassign the myNumber variable to a value of myNumber + 2.  Print it again.
+myNumber = myNumber + 2
+console.log('My number + two', myNumber)
   // Notice how the value does change this time.  Why?
-
+// because this time we reasigned the variable so the value stored in the variable will change
 // 3e. Look at the declaration and reassignments below.  Guess what will log each time and why.  Then uncomment them and run it.
-    // var counter = 0;
-    // console.log(counter)
-    // counter = counter + 1
-    // console.log(counter)
-    // counter += 1
-    // console.log(counter)
-    // counter ++
-    // console.log(counter)
+    var counter = 0;
+    console.log(counter)
+    counter = counter + 1
+    console.log(counter)
+    counter += 1
+    console.log(counter)
+    counter ++
+    console.log(counter)
 
 
 
