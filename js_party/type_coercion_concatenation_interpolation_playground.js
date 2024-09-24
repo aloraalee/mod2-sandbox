@@ -48,18 +48,26 @@ console.log("type_coercion_concatenation_interpolation_playground.js is running"
       console.log(brunoSong)
 
 // PART 3: Interpolation
-  // var bigBrag = `I have ${quantity} VERY fancy and sophisticated${mythicalCreature}!`  
+  var bigBrag = `I have ${quantity} VERY fancy and sophisticated${mythicalCreature}!`  
+  console.log(bigBrag)
         //Note the weird spacing between sophisticated and mythicalCreature above due to how we already included a space in the mythicalCreature value previously.
 
 // 3a. Ensure the quantity, mythicalCreature, and bigBrag variables above are not commented out. Click Run.
 
-// 3b. The bigBrag variable above uses a different way of combining values called interpolation. It accomplishes the same goal as concatenation but uses different syntax - backticks instead of quotes(``) and these guys ${}.  Let's try it!
+// 3b. The bigBrag variable above uses a different way of combining values called interpolation. It accomplishes the same goal as concatenation but uses different syntax - 
+//backticks instead of quotes(``) and these guys ${}.  Let's try it!
      // Declare a variable and assign it a string value of a name.
+     var studyAbroadFriend = "Sara"
      // Declare a variable and assign it a string value of a celebratory exclamation ("congrats", "woohoo", etc)
+     var exclamation = "Yay, yay, yay"
      // Declare a variable and assign it to a string value of a nice characteristic ("cute", "nice", etc)
+     var characteristic = "cute"
      // Declare a variable "babyNote" and assign it a statement of new baby congratulations that uses interpolation and your other 3 variables.  For example: "Congratulations Trisha! I heard your new baby is adorable!"
-
+      var babyNote =  `${exclamation}, ${studyAbroadFriend}, I saw on instagram you're prego. Your baby is going to be soooo ${characteristic}`
+      console.log(babyNote)
 // 3c. Use the variables below to make an interpolated string.
-      // var celebration = 'birthday'
-      // var age = 25
+      var celebration = 'birthday'
+      var age = 25
 
+      var aging_comment = `I wish this ${celebration} I was turing ${age}...`
+      console.log(aging_comment)
