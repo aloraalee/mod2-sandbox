@@ -52,25 +52,25 @@ console.log("data_types_and_variables_playground.js is running")
 // Rename each of the variables below to be more clear and specific about the value(s) they hold.
 
 // 2a.
-// var thing = 'Jennifer'
+var name = 'Jennifer'
 
 // 2b.
-// var students = 15
+var studentCount = 15
 
 // 2c. 
-// var candyBar = ['snickers', 'twix', 'milky way', '3 musketeers']
+var candyName = ['snickers', 'twix', 'milky way', '3 musketeers']
 
 // 2d.
-// var object = {
-//   name: 'bicycle',
-//   numWheels: 2,
-//   goesFast: true,
-//   isBoring: false,
-//   parts: ['pedals', 'frame', 'handlebars', 'wheels', 'brakes']
-// }
+var bikeInfo = {
+  name: 'bicycle',
+  numWheels: 2,
+  goesFast: true,
+  isBoring: false,
+  parts: ['pedals', 'frame', 'handlebars', 'wheels', 'brakes']
+}
 
 // 2d. What's a better name than 'login' for a variable used to track if a user is logged in or not at any given time?
-// var login = true  
+var loginCurrent = true  
 
 
 
