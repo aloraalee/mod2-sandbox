@@ -129,9 +129,14 @@ console.log('My number + two', myNumber)
 
 // PART 7: More
 // 7a. Declare a variable and assign it a value of an empty array.  Then print it to the console.
-
+    var dogs = []
+    console.log("Dogs:", dogs)
 // 7b. Declare a variable and assign it a value of an empty object.  Then print it to the console.
-
+    goodSmells = {}
+    console.log("Good smells:", goodSmells)
 // 7c. Declare a variable and assign it a value of an array of 3 of your friends' names.  Then print it to the console.
-
+    var friendsNames = ['Brian', 'Ellen', 'Kaylee']
+    console.log("Friends' names:", friendsNames)
 // 7d. Declare a variable and assign it a value of a car object with 2 key-value pairs: make and model.  Then print it to the console.
+    var makeAndModel = {make: 'Toyota', model: 'Pruis'}
+    console.log('Make and model:', makeAndModel)
