@@ -1,5 +1,5 @@
 /* To run the code in this file, run the command:
-  node js_party/data_types_and_variables_playground.js
+  node data_types_and_variables_playground.js
 */
 
 console.log("data_types_and_variables_playground.js is running")
@@ -12,27 +12,39 @@ console.log("data_types_and_variables_playground.js is running")
       console.log('helloWorld: ', helloWorld)
 
 // 1a. Declare a variable and assign it a value of a string of your middle name. Then print it to the console.
-
+      var middle_name = 'Lee Christiana'
+      console.log('Middle name: ', middle_name)
 // 1b. Declare a variable and assign it a value of the number of pets you have. Then print it to the console.
-
+      var pet_nums = 0
+      console.log('Number of pets:', pet_nums)
 // 1c. Declare a variable and assign it a value of null.  Then print it to the console.
-
+      var broken_bones = null
+      console.log('Broken bones:', broken_bones)
 // 1d. Declare a variable and assign it a value of whether you have ever gone bunjee jumping (true/false).  Then print it to the console. 
-
+      var bunjee_jumping = false
+      console.log('Bunjee jumping?:', bunjee_jumping)
 // 1e. Declare a variable and assign it a value of an empty string.  Then print it to the console.
-
+      var nothing_man = ''
+      console.log('Nothing Man:', nothing_man)
 // 1f. Declare a variable and assign it a value of the expression 2 + 5.  Then print it to the console.
-
+      var math = 2 + 5
+      console.log('Math:', math)
 // 1g. Declare a variable and assign it a value of the expression (100 - 20) / 2.  Then print it to the console.
-
+      var complex_math = (100 - 20) / 2
+      console.log('Complex math:', complex_math)
 // 1h. Declare a variable "potato" but do not assign it a value yet. Did you know you can do this? Print it to the console. What do you get?
-
+    var potato
+    console.log('Potato:', potato)
 // 1i. Now, on a new line (not the line where you declared it) assign a string of your fav potato dish to your already-declared "potato" variable.  Print it to the console.
-
+    var potato = 'french fries'
+    console.log('Potato:', potato)
 // 1j. Look at the console log below.  Notice that gobblyGoop has not been declared as a variable anywhere yet. Think about what will show in the console when you uncomment and run that line.  Try it! 
-      // console.log(gobblyGoop)
+//       console.log(gobblyGoop)
 
+//       console.log(gobblyGoop)
+//                   ^
 
+// ReferenceError: gobblyGoop is not defined
 
 
 // PART 2: Does naming matter?  (Hint - yes it sure does!)
