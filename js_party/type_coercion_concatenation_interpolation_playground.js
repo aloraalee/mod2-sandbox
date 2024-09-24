@@ -1,5 +1,5 @@
 /* To run the code in this file, run the command:
-      node js_party/type_coercion_concatenation_interpolation_playground.js
+      node type_coercion_concatenation_interpolation_playground.js
 */
 
 console.log("type_coercion_concatenation_interpolation_playground.js is running")
@@ -7,15 +7,20 @@ console.log("type_coercion_concatenation_interpolation_playground.js is running"
 // PART 1: Type Coercion
 
 // 1a. Look at the variable declarations and assignments below.  Guess what will log for creatureCount.  Uncomment and run it.
-        // var quantity = 3;
-        // var mythicalCreature = " unicorns";
-        // var creatureCount = quantity + mythicalCreature;
-        // console.log(creatureCount)
+        var quantity = 3;
+        var mythicalCreature = " unicorns";
+        var creatureCount = quantity + mythicalCreature;
+        console.log(creatureCount)
+        console.log(typeof(creatureCount))
 
 // 1b. In the example above, what is the data type of the quantity variable?
+// number
 // 1c. In the example above, what is the data type of the mythicalCreature variable?
+// string
 // 1d. In the example above, what is the data type of the creatureCount variable?  
+// string
 //     How can a number plus a string equal a string?
+// string concatination 
 //     Take a few minutes to look up and read about Type Coercion in the MDN docs.
 
 
