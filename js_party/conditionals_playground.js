@@ -1,5 +1,5 @@
 /* To run the code in this file, run the command:
-      node js_party/conditionals_playground.js
+      node conditionals_playground.js
 */
 
 console.log("conditionals_playground.js is running")
@@ -7,17 +7,22 @@ console.log("conditionals_playground.js is running")
 
 /* Exercise 1 - Voter Eligibility
 
-Write a function checkVotingEligibility that takes an age as input and prints a message indicating whether the person is eligible to vote (age 18 and above) or not eligible to vote (below age 18).
+Write a function checkVotingEligibility that takes an age as input and prints a message indicating whether the person is eligible to vote 
+// (age 18 and above) or not eligible to vote (below age 18).
 */
 
 function checkVotingEligibility(age) {
-  // Your code here
+  if(age >= 18) {
+    console.log("You are eligible to vote");
+  } else {
+    console.log("You are too young to vote")
+  }
 }
 
 // Check your work by uncommenting each of these invocations:
-// checkVotingEligibility(19)
-// checkVotingEligibility(15)
-// checkVotingEligibility(18)
+checkVotingEligibility(19)
+checkVotingEligibility(15)
+checkVotingEligibility(18)
 
 
 /* Exercise 2 - Password Strength Checker
@@ -30,13 +35,19 @@ Strong: more than 12 characters
 */
 
 function checkPasswordStrength(password) {
-  // Your code here
+  if (password.length <6){
+    console.log("Weak");
+  } else if (password.length >=6 && password.length <= 12){
+    console.log("Medium");
+  } else {
+    console.log("Strong");
+  }
 }
 
 // Check your work by uncommenting each of these invocations:
-// checkPasswordStrength("pz394Gw86wwmh1")
-// checkPasswordStrength("12345")
-// checkPasswordStrength("myPass1!")
+checkPasswordStrength("pz394Gw86wwmh1")
+checkPasswordStrength("12345")
+checkPasswordStrength("myPass1!")
 
 
 /* Exercise 3 - Grade Calculator
@@ -52,13 +63,23 @@ F: 0-59
 */
 
 function calculateGrade(score) {
-  // Your code here
+if (score >= 90) {
+  console.log("A");
+} else if (score >= 80 && score < 90) {
+  console.log("B");
+} else if (score >= 70 && score < 80) {
+  console.log("C");
+} else if (score < 70 && score >=60) {
+  console.log("D");
+} else {
+  console.log("F");
+  }
 }
 
 // Check your work by uncommenting each of these invocations:
-// calculateGrade(95)
-// calculateGrade(86)
-// calculateGrade(79)
-// calculateGrade(61)
-// calculateGrade(52)
+calculateGrade(95)
+calculateGrade(86)
+calculateGrade(79)
+calculateGrade(61)
+calculateGrade(52)
 
