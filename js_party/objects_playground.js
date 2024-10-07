@@ -1,5 +1,5 @@
 /* To run the code in this file, run the command:
-      node js_party/objects_playground.js
+      node objects_playground.js
 */
 
 console.log("objects_playground.js is running")
@@ -8,13 +8,14 @@ console.log("objects_playground.js is running")
 
 var mark = { name: 'Mark', program: 'BE', cohort: 2201 };
 
-// 1a. First, predict what each console.log below is going to print to the console. Then, uncomment each console.log and check your predictions. Did anything suprise you? 
+// 1a. First, predict what each console.log below is going to print to the console. 
+// Then, uncomment each console.log and check your predictions. Did anything suprise you? 
 
-// console.log(mark);
+console.log(mark);
 
-// console.log(mark.name);
+console.log(mark.name);
 
-// console.log(mark.program);
+console.log(mark.program);
 
 // console.log(mark.cohort);
 
@@ -26,20 +27,23 @@ var julie = {
 
 // 1b. Log the entire julie object to the console.
 
+console.log(julie)
+
 // 1c. Using the julie variable, log the string of Julie to the console.
-
+console.log(julie.name)
 // 1d. Using the julie variable, log Julie's cohort to the console.
-
+console.log(julie.cohort)
 // 1e. Mark has decided to join the frontend program! Check out the console log below. What happened?
 
 mark.program = 'FE';
-// console.log(mark);
+console.log(mark);
 
 // 1f. Julie is changing cohorts. Reassign her cohort to 2001. Console log the julie object to make sure it worked!
-
+julie.cohort = '2001'
+console.log(julie)
 // 1g. Uncomment the console log below. What happened?
 mark.favTopic = 'parameters and arguments';
-// console.log(mark)
+console.log(mark)
 
 // 1h. Add a new key:value pair (property) to Julie's object.
 
@@ -64,11 +68,12 @@ var school = {
   },
 };
 
-// 3a. First, predict what each console.log below is going to print to the console. Then, uncomment each console.log and check your predictions. Did anything suprise you? 
+// 3a. First, predict what each console.log below is going to print to the console. 
+// Then, uncomment each console.log and check your predictions. Did anything suprise you? 
 
-// console.log(school.directors.BE);
+console.log(school.directors.BE);
 
-// console.log(school.directors.fe);
+console.log(school.directors.fe);
 
 var petOwner = {
   name: 'Kayla',
@@ -91,20 +96,21 @@ var petOwner = {
 };
 
 // 3b. Using the petOwner variable, print the string of Kayla to the console.
-
+console.log(petOwner.name)
 // 3c. Using the petOwner variable, print the string of Cap to the console.
-
+console.log(petOwner.dog.name)
 // 3d. Using the petOwner variable, print Pepper's age to the console.
-
+console.log(petOwner.cat.age)
 // 3e. Using the petOwner variable, print the sting of tuna to the console.
-
+console.log(petOwner.cat.favoriteTreat.name)
 // 3f. Using the petOwner variable, print the cost of milkbones to the console.
-
+console.log(petOwner.dog.favoriteTreat.price)
 
 
 // PART 4: Methods!
 
 // NOTE: Methods are functions that exist within an object.
+
 
 var bowlingAlley = {
   name: 'Bowlero',
@@ -118,12 +124,13 @@ var bowlingAlley = {
   }
 };
 
-// 4a. What do you think will happen if we invoke the welcomeCustomer method? Predict, and then try it (uncomment below)!
+// 4a. What do you think will happen if we invoke the welcomeCustomer method? 
+//Predict, and then try it (uncomment below)!
 
-// bowlingAlley.welcomeCustomer();
+bowlingAlley.welcomeCustomer("Alora");
 
 // 4b. Invoke the sayByeToCustomer method.
-
+bowlingAlley.sayByeToCustomer()
 // 4c. Go back to PART 2 and add a method to your kitchen object. Invoke it to make sure it works!
 
 
