@@ -27,10 +27,23 @@ let favoriteFoods = ['pizza', 'blueberries', 'ice cream', 'sushi']
 let partnerName = null;
 let jobTitle;
 
-// console.log(jobTitle)
+console.log('policeSketchDescription eyes:', policeSketchDescription.eyes)
+
+console.log('police sketch description number of tattoos: ', policeSketchDescription.visibleTattoos)
+
+console.log('array pizza:', favoriteFoods[0])
+
+console.log('array last: ', favoriteFoods[3])
 
 
+console.log('Job Title', jobTitle)
 
+
+// Declare two variables, one called quantity and one called mythical creatures
+
+var quantity = 28;
+
+var mythicalCreatures = 'fairies';
 
 
 
