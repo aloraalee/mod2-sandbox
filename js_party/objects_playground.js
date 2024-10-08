@@ -137,7 +137,8 @@ bowlingAlley.sayByeToCustomer()
 
 // PART 5: Bracket & Dot Notation
 
-// So far, we've been using dot notation to access objects (i.e. person.name), but you can also use bracket notation (i.e. person['name'])
+// So far, we've been using dot notation to access objects (i.e. person.name), 
+// but you can also use bracket notation (i.e. person['name'])
 
 var vehicle = {
   type: 'motorcycle',
@@ -147,30 +148,33 @@ var vehicle = {
   miles: 8402,
 };
 
-// 5a. First, predict what each console.log below is going to print to the console. Then, uncomment each console.log and check your predictions. Did anything surprise you? 
+// 5a. First, predict what each console.log below is going to print to the console. 
+// Then, uncomment each console.log and check your predictions. Did anything surprise you? 
 
-// console.log(vehicle.type);
+console.log(vehicle.type);
 
-// console.log(vehicle['type']);
+console.log(vehicle['type']);
 
 // console.log(vehicle[type]);
 
 // 5b. Print the brand of the motorcycle using dot notation.
-
+console.log(vehicle.brand)
 // 5c. Print the brand of the motorcycle using bracket notation.
+console.log(vehicle['brand'])
 
 var currentProperty = 'wheels';
+// 5d. First, predict what each console.log below is going to print to the console. 
+// Then, uncomment each console.log and check your predictions. Did anything surprise you? 
 
-// 5d. First, predict what each console.log below is going to print to the console. Then, uncomment each console.log and check your predictions. Did anything surprise you? 
+console.log('1', vehicle['currentProperty']);
 
-// console.log('1', vehicle['currentProperty']);
+console.log('2', vehicle[currentProperty]);
 
-// console.log('2', vehicle[currentProperty]);
-
-// console.log('3', vehicle.currentProperty);
+console.log('3', vehicle.currentProperty);
 
 // 5e. When might we prefer to use dot notation? When might we need to use bracket notation?
-
+// We prefer dot notation for a string
+// We prefer bracket notation for a method or a parameter
 
 
 // PART 6: Using objects in functions
@@ -195,11 +199,12 @@ function walk(dog) {
   }
 };
 
-// 6a. First, predict what each console.log below is going to print to the console. Then, uncomment each console.log and check your predictions. Did anything surprise you? 
+// 6a. First, predict what each console.log below is going to print to the console. 
+// Then, uncomment each console.log and check your predictions. Did anything surprise you? 
 
-// console.log(walk(luna))
+console.log(walk(luna))
 
-// console.log(walk(cap))
+console.log(walk(cap))
 
 var ironman = { name: 'Tony Stark', secretIdentity: false };
 
@@ -210,7 +215,11 @@ var spiderman = { name: 'Peter Parker', secretIdentity: true };
 // 6b. Complete the function below so that the following strings are logged for each invokation. 
 
 function greetAvenger(hero) {
-  // code here
+  if (hero.secretIdentity === false) {
+  console.log(`Hello, ${hero.name}`)
+  } else {
+    console.log("I don't know who you are!")
+  }
 };
 
 greetAvenger(ironman);
