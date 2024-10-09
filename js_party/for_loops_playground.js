@@ -53,6 +53,13 @@ for(var i = 0; i < mamboTeam.length; i++) {
 var nums = [10, 30, 20, 40, 60, 20]
 var sum = 0
 
+for(var i = 0; i < nums.length; i++) {
+  sum = nums[i] + sum
+  console.log(sum)
+}
+
+console.log('final sum:',sum)
+
 // Use a for loop to add up all the numbers in the nums array.  You'll want to look at each number one at a time and add it to the sum variable. 
 // Then, after the for loop, console log sum to confirm the expect result.
 // Expected result: 180
@@ -86,11 +93,22 @@ var pets = [
 // Sodie
 // Pumpernickel
 
-
+for (var i = 0; i < pets.length; i++) {
+  console.log(pets[i].name)
+}
 
 // 6b. Using a for loop, print the following sentences to the console (in this order!):
 // Leta's cat, Tilly, loves cheese.
 // Amy's dog, Sodie, loves milkbones.
 // Eric's cat, Pumpernickel, loves kibble.
+
+for(var i = 0; i < pets.length; i++) {
+  ownerName = pets[i].human
+  type = pets[i].type
+  name = pets[i].name
+  favoriteTreat = pets[i].favoriteTreat
+  
+  console.log(`${ownerName}'s ${type}, ${name}, loves ${favoriteTreat} `)
+}
 
 
