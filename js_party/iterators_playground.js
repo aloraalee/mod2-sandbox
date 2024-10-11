@@ -1,5 +1,5 @@
 /* To run the code in this file, run the command:
-      node js_party/iterators_playground.js
+      node iterators_playground.js
 */
 
 console.log("iterators_playground.js is running")
@@ -18,6 +18,14 @@ function printSnacksStatement(snacks) {
   }
 }
 
+function shoutSnacks(snacks) {
+  for (var i = 0; i < snacks.length; i++) {
+    var shout = `I love ${snacks[i]}!`.toUpperCase()
+    console.log(shout)
+  }
+}
+
+// shoutSnacks(snacks)
 // printSnacksStatement(snacks)
 
 //  2. Uncomment the invocation below to see the same task accomplished using the forEach() iterator method instead of a for loop.
@@ -29,6 +37,14 @@ function forEachThruSnacks(snacks) {
   })
 }
 
+function forEachShoutSnacks(snacks) {
+  snacks.forEach(snack => {
+    var shout = `I love ${snack}!`.toUpperCase()
+    console.log(shout)
+  })
+}
+
+// forEachShoutSnacks(snacks)
 // forEachThruSnacks(snacks)
 
 // 3. Uncomment the invocation below to see the iterator method map() being used to create a *new array* with "I love <each snack>" strings in it.
@@ -40,9 +56,17 @@ function mapOverSnacks(snacks) {
   console.log(loveSnackStatements)
 }
 
+function mapOverShoutSnacks(snacks) {
+  var loveSnackShoutStatemnts = snacks.map(snack => {
+    return `I love ${snack}!`.toUpperCase()
+  })
+  console.log(loveSnackShoutStatemnts)
+}
+// mapOverShoutSnacks(snacks)
 // mapOverSnacks(snacks)
 
-// 4. Uncomment the invocation below to see the iterator method find() being used to return the FIRST element in the array that meets the criteria of being 5 letters long.
+// 4. Uncomment the invocation below to see the iterator method find() being used to return the FIRST element in the array that meets the criteria 
+// of being 5 letters long.
 
 function findFiveLetterSnack(snacks) {
   var foundSnack = snacks.find(snack => {
@@ -53,7 +77,8 @@ function findFiveLetterSnack(snacks) {
 
 // findFiveLetterSnack(snacks)
 
-// 5. Uncomment the invocation below to see the iterator method filter() being used to return a new array of ALL snacks that meet the criteria of being more than 6 letters long.
+// 5. Uncomment the invocation below to see the iterator method filter() being used to return a new array of ALL snacks that meet the criteria 
+// of being more than 6 letters long.
 
 function filterForOverSixLetters(snacks) {
   var filteredSnacks = snacks.filter(snack => {
@@ -65,7 +90,8 @@ function filterForOverSixLetters(snacks) {
 // filterForOverSixLetters(snacks)
 
 
-// 6. Reduce is pretty spicy!  Uncomment the invocation below to see the iterator method reduce() being used to iterate over the numbers array and return the sum of all the numbers.
+// 6. Reduce is pretty spicy!  Uncomment the invocation below to see the iterator method reduce() being used to iterate over the numbers array 
+// and return the sum of all the numbers.
 
 var numbers = [31, 39, 42, 28, 23, 27, 40]
 
@@ -77,8 +103,10 @@ function getSum(numbers) {
   console.log(total)
 }
 
-// getSum(numbers)
+getSum(numbers)
 // Expected result: 230
 
 
-// 7. You try it!  Try writing you own function called "shoutSnacks" that takes in the original "snacks" array and uses the iterator method "forEach" to console.log() each of the snacks changed to uppercase.  You'll also need to use the .toUpperCase() method.  Use MDN and google to help you!  Try it! Get weird!
+// 7. You try it!  Try writing you own function called "shoutSnacks" that takes in the original "snacks" array and uses the iterator method 
+// "forEach" to console.log() each of the snacks changed to uppercase.  You'll also need to use the .toUpperCase() method.  
+// Use MDN and google to help you!  Try it! Get weird!
