@@ -166,6 +166,32 @@ const sum = numbers.reduce((accumulator, num) => {
 // => { fantastic: 9, amazing: 7, childish: 8 }
 
 
+//Example III. 
+// Using reduce, create a new object the stores the lengths of each word.
+
+// ALWAYS RETRUN THE ACCUMULATOR AT THE END
+// When using DOT NOTATION, think of it as LITERAL NOTATION
+// When using BRACKET NOTATION, the variable is first evaluated
+// and they stored as the key in the object
+
+const adjectives = ['fantastic', 'amazing', 'childish'];
+
+// console output
+// => { fantastic: 9, amazing: 7, childish: 8 }
+
+
+function countChars() {
+  const countedChars = adjectives.reduce((acc, word) => {
+    // console.log("ACC:", acc); // {}
+    // console.log("WORD:", word); // 'fantastic'
+
+    acc[word] = word.length
+    return acc;
+  },{}) // What is our initial value going to be? aka What is the final data type?
+  return countedChars
+}
+console.log(countChars())
+
 
 
 // FOR EACH:
@@ -211,6 +237,7 @@ logDogsAndLegs(dogs)
 
 
 // SORT
+// You need two returns one for the function container and one for the call-back function
 
 // Exercise A:
 
@@ -221,3 +248,30 @@ numbersListB.sort((a,b) => {
 })
 
 console.log('sort List B:', numbersListB)
+
+
+// Exercise B:
+
+const cities = [
+  { name: 'New York', population: 8398748, country: 'United States' },
+  { name: 'Tokyo', population: 37393000, country: 'Japan' },
+  { name: 'London', population: 8908081, country: 'United Kingdom' },
+  { name: 'Mumbai', population: 12478447, country: 'India' }
+];
+
+// Scope: What we have access to and where we have access to it (it being a variable)
+
+function sortCitiesByPopulation(cities) {
+  return cities.sort((a, b) => {
+    // console.log("city:",city);
+    return b.population - a.population;
+  });
+}
+
+console.log(sortCitiesByPopulation(cities));
+// Output: [
+//   { name: 'Tokyo', population: 37393000, country: 'Japan' },
+//   { name: 'Mumbai', population: 12478447, country: 'India' },
+//   { name: 'London', population: 8908081, country: 'United Kingdom' }
+//   { name: 'New York', population: 8398748, country: 'United States' },
+// ]
