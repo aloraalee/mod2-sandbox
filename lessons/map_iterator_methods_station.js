@@ -28,5 +28,11 @@ var countries = [
 ]
 
 function explainCodes() {
-  
+
+  var countryCodeStatements = countries.map( country => {
+    return `${country.countryCode} stands for ${country.countryName}`
+  }) 
+  return countryCodeStatements
 }
+
+console.log(explainCodes(countries))
