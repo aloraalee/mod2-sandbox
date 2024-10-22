@@ -40,16 +40,46 @@ const craftSupplies = {
 // Write a function that takes in a parameter of craft and returns a list of supplies needed
 
 //getSupplyList('crossStitching') 
-    // --> ['fabric', 'needle', 'thread', 'scissors', hoop]
+    // --> ['fabric', 'needle', 'thread', 'scissors', 'hoop']
 
 //getSupplyList('crocheting') 
     // --> ['hook', 'yarn', 'scissors']
 
 
+function getSupplyList(craft) {
+  // console.log('craft supplies:', craftSupplies)
+  // console.log('craft:', craft)
+  // console.log('the data I want:', craftSupplies[craft])
+
+  var result = craftSupplies[craft].map((supply) => {
+    // console.log('supply:', supply)
+    // console.log(supply.name)
+    return supply.name
+  })
+
+// pseudo code:
+// First I need to get to the specific craft's array before I can use an iterator. 
+// I think that to access this info I will need to use bracket notation because it is used with parameters. 
+// I know that I will need to return the name information only, so use map to return an array of just the name information. 
+
+  // console.log('result:', result)
+  return result
+}
+
+// console.log('get supply list cross stiching:', getSupplyList('crossStitching'))
+// console.log('get supply list cross stiching:', getSupplyList('crocheting'))
 
 
-
-
+function reduceSupplyList(craft) {
+  var result = craftSupplies[craft].reduce((acc, supply) => {
+    // console.log('acc', acc)
+    // console.log('supply', supply)
+    acc.push(supply.name)
+    return acc
+  }, [])
+  return result
+}
+// console.log('reduce supply list', reduceSupplyList('crossStitching'))
 
 
 
@@ -127,6 +157,30 @@ const coloradoPlants = [
 ];
 
 // Write a function that creates an object that organizes the plants by habitat.
+// This is a common thing you will need to do on your assessment
+
+// pseudo code:
+// I am starting off with an array of objects. 
+// I want to return an object where the key is the habitat value and the value is an array of the names of plants that belong.
+// 1. I need to figure out how to access the habitat values. 
+// 2. I need to make the habitat values a key in a new object
+// 3. Need the value to be an empty array
+// 4. Push names into the array if they match the habitat
+
+
+
+function organizeByHabitat() {
+  var result = coloradoPlants.reduce((acc, plant) => {
+    if (!acc[plant.habitat]) {
+      acc[plant.habitat] = []
+    }
+   acc[plant.habitat].push(plant.name)
+    return acc
+  }, {})
+  return result
+}
+console.log('organized by habitat:', organizeByHabitat())
+
 
 //organizeByHabitat() // expected result ==> 
     // {
