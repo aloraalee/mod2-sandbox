@@ -4,7 +4,7 @@ Pair Practice 3 - Pantry
 To run the code in this file, run the command:
   node practice_sessions/pair_practice_3_pantry.js
 */ 
-console.log("pair_practice_3_pantry.js is running")
+// console.log("pair_practice_3_pantry.js is running")
 
 
 
@@ -23,7 +23,9 @@ getMissingIngredients(recipe2) --> ["cheese", "ham"]
 getMissingIngredients(recipe3) --> []
 */
 
-
+function getMissingIngredients(recipe) {
+  
+}
 
 
 
