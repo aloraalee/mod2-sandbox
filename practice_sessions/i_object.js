@@ -102,7 +102,7 @@ const coloradoPlants = [
     name: "Columbian Lily",
     scientificName: "Lilium columbianum",
     bloomingSeason: "Late Spring to Early Summer",
-    habitat: "moutains",
+    habitat: "mountains",
     height: 24,
   },
   {
