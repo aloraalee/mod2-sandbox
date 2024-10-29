@@ -23,12 +23,6 @@ getMissingIngredients(recipe2) --> ["cheese", "ham"]
 getMissingIngredients(recipe3) --> []
 */
 
-function getMissingIngredients(recipe) {
-  
-}
-
-
-
 
 /* Level TWO
 Refactor your function so that instead of returning an array of missing ingredients, it returns a string stating what you need to buy.  
@@ -37,5 +31,21 @@ getMissingIngredients(recipe1) --> "You need to buy: yeast."
 getMissingIngredients(recipe2) --> "You need to buy: cheese, ham."
 getMissingIngredients(recipe3) --> "You have all the ingredients for this recipe."
 */
+
+function getMissingIngredients(recipe) {
+  var missingIngredients = []
+  recipe.forEach(ingredient => {
+    if  (!pantry.includes(ingredient)) {
+      missingIngredients.push(ingredient)
+    }
+  });
+  if (missingIngredients.length == 0) {
+    return "You have all the ingredients for this recipe."
+   } else {
+  return `You need to buy: ${missingIngredients.join(', ')}.`
+}}
+console.log('recipe 1', getMissingIngredients(recipe1))
+console.log('recipe 2', getMissingIngredients(recipe2))
+console.log('recipe 3', getMissingIngredients(recipe3))
 
 

@@ -4,7 +4,7 @@ Pair Practice 1 - Sales Data
 To run the code in this file, run the command:
   node practice_sessions/pair_practice_1_sales.js
 */ 
-console.log("pair_practice_1_sales.js is running")
+// console.log("pair_practice_1_sales.js is running")
 
 
 const salesData = {
@@ -46,13 +46,40 @@ getTotalSalesByRegion("east") -->  "Total sales for the east region were $780000
 getTotalSalesByRegion("west") -->  "Total sales for the west region were $385000 dollars."
 */
 
+// function getTotalSalesByRegion(region) {
+//   var regionArray = salesData[region]
+
+//   var result = regionArray.reduce((acc, saleData) => {
+//     acc += saleData.totalSales
+//       return acc
+//   },0)
+//   return `Total sales for the ${region} region were $${result} dollars.`
+// }
+// console.log(getTotalSalesByRegion('east'))
+// console.log(getTotalSalesByRegion('west'))
 
 
 /*
 LEVEL TWO
-Modify your function so that it also takes in a rating. Your function should only return  the total sales for that region by sales people with the given rating.
+Modify your function so that it also takes in a rating. Your function should only 
+return the total sales for that region by sales people with the given rating.
 
 getTotalSalesByRegion("west", "B") -->  105000
 getTotalSalesByRegion("east", "A") -->  570000
 getTotalSalesByRegion("east", "C") -->  0
 */
+
+function getTotalSalesByRegion(region, rating) {
+    var regionArray = salesData[region]
+
+    var byRating = regionArray.reduce((acc, sale) => {
+      if(sale.rating == rating) {
+        acc += sale.totalSales
+      }
+      return acc
+    }, 0)
+    return byRating
+}
+console.log(getTotalSalesByRegion("west", "B"))
+console.log(getTotalSalesByRegion("east", "A"))
+console.log(getTotalSalesByRegion("east", "C"))

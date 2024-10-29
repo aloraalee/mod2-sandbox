@@ -56,13 +56,21 @@ function countLongWords(string, num) {
   })
   return result.length
 }
-console.log(countLongWords(pangram, 4))
-console.log(countLongWords(quote, 5))
+// console.log(countLongWords(pangram, 4))
+// console.log(countLongWords(quote, 5))
 
 
 
 /* LEVEL THREE
-Write a function that takes in a string and returns the words in that string as a single object.  The object's keys will be numbers representing the length of each word.  The values will be arrays containing the appropriate words. 
+Write a function that takes in a string and returns the words in that string as a single object.  
+The object's keys will be numbers representing the length of each word.  
+The values will be arrays containing the appropriate words. 
+
+Pseudo Code:
+1. Start with split to turn the string into an array. 
+2. Iterate through the array with conditional logic. If 3 letters, elsif 4 letters, else 5 letters...
+3. The code to go with the conditions will be to map over the data since it needs to be transformed into a new object
+
 
 reorganizeWords(panagram) -->  {
   '3': [ 'the', 'fox', 'the', 'dog' ],
@@ -78,3 +86,19 @@ reorganizeWords(quote) -->  {
   '9': [ 'something', 'something' ]
 }
 */
+
+function reorganizeWords(string) {
+  var words = string.split(' ')
+
+    var organizedWords = words.reduce((acc, word) => {
+      var wordLength = word.length
+      if(!acc[wordLength]) {
+        acc[wordLength] = []
+      }
+    acc[wordLength].push(word)
+      return acc
+    }, {})
+    return organizedWords
+}
+console.log(reorganizeWords(pangram))
+console.log(reorganizeWords(quote))
